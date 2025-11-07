@@ -64,8 +64,14 @@
   img {
     margin-top: 30px;
     max-width: 350px;
-    border-radius: 25px;
-    box-shadow: 0 0 25px #ff5f8a;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #ff5f8a, 0 0 50px #ffc0cb;
+    border: 5px solid #ff66a1;
+    transition: transform 0.5s;
+  }
+
+  img:hover {
+    transform: scale(1.05);
   }
 
   footer {
@@ -82,6 +88,22 @@
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
+  }
+
+  .play-button {
+    font-size:1.3rem; 
+    padding:10px 20px; 
+    margin-top:20px; 
+    border-radius:10px; 
+    background: #ff66a1; 
+    color:#fff; 
+    border:none; 
+    cursor:pointer;
+    transition: transform 0.3s;
+  }
+
+  .play-button:hover {
+    transform: scale(1.05);
   }
 </style>
 </head>
@@ -101,15 +123,22 @@
     <p>With all my love,<br><strong style="color:#e60073; font-size:1.7rem;">💞 Collins 💞</strong></p>
   </div>
 
-  <img src="https://i.pinimg.com/originals/b8/f2/7b/b8f27b06d98e383fc8727e63ff918c7e.gif" alt="Love animation" />
+  <!-- Replace 'gakii.jpg' with her photo file or URL -->
+  <img src="gakii.jpg" alt="My Beautiful Gakii" />
+
+  <!-- Play Music Button -->
+  <button class="play-button" onclick="document.getElementById('loveMusic').play()">
+    Play Romantic Music 🎵
+  </button>
+
+  <audio id="loveMusic" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
   <footer>💐 Made with eternal love by Collins for Gakii 💐<br>
   Forever Yours 💘 | Always & Forever 💍</footer>
 
   <div class="emoji-rain">💌🌈💖🌹✨💞</div>
-
-  <audio autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
-  </audio>
 </body>
 </html>
